@@ -237,10 +237,7 @@ const showModalDetails = (data) => {
 }
 
 // sorting:
-btnSort.addEventListener('click', ()=>{
-
-
-    
+btnSort.addEventListener('click', () => {
     console.log('clicked')
 })
 loadData();
