@@ -158,6 +158,9 @@ const showModalDetails = (data) => {
     const div = document.createElement('div');
     div.innerHTML = `
     <div class="modal-content ">
+    <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">X</button>
+    </div>
     <div class="row row-cols-1 row-cols-md-2 g-4">
     <div class="col">
       <div class="card">
@@ -213,15 +216,7 @@ const showModalDetails = (data) => {
     </div>
     </div>
 
-
-
-
-
-
-
-    <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-    </div>
+    
 </div>
     
     `;
