@@ -64,9 +64,9 @@ const displayAllData = (tools) => {
                                 <h5 class="card-title">${'features'}</h5>
                                 <div>
                                         <ol>
-                                            <li>${tool.features[0]}</li>
-                                            <li>${tool.features[1]}</li>
-                                            <li>${tool.features[2]}</li>
+                                                <li>${tool.features[0] ? tool.features[0] : "No Data Found"}</li>
+                                                <li>${tool.features[1] ? tool.features[0] : "No Data Found"}</li>
+                                                <li>${tool.features[2] ? tool.features[0] : "No Data Found"}</li>
                                         </ol>
 
                                 </div>
@@ -118,9 +118,9 @@ const displayData = (tools) => {
                                 <h5 class="card-title">${'features'}</h5>
                                 <div>
                                         <ol>
-                                            <li>${tool.features[0]}</li>
-                                            <li>${tool.features[1]}</li>
-                                            <li>${tool.features[2]}</li>
+                                        <li>${tool.features[0] ? tool.features[0] : "No Data Found"}</li>
+                                        <li>${tool.features[1] ? tool.features[0] : "No Data Found"}</li>
+                                        <li>${tool.features[2] ? tool.features[0] : "No Data Found"}</li>
                                         </ol>
 
                                 </div>
@@ -194,9 +194,9 @@ const showModalDetails = (data) => {
             <div>
             <h4>Integrations</h4>
                 <ul>
-                <li>${data.integrations[0]}</li>
-                <li>${data.integrations[1]}</li>
-                <li>${data.integrations[2]}</li>
+                <li>${data.integrations[0] ? data.integrations[0] : "No Data Found"}</li>
+                <li>${data.integrations[1] ? data.integrations[0] : "No Data Found"}</li>
+                <li>${data.integrations[2] ? data.integrations[0] : "No Data Found"}</li>
                 </ul>
             </div>
         
