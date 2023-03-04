@@ -167,16 +167,16 @@ const showModalDetails = (data) => {
             <h1>${data.description}</h1>
             <div class="d-flex justify-content-between">
                     <div class="text-success">
-                    <p>${data.pricing[0].price}</p>
-                    <p>${data.pricing[0].plan}</p>
+                   ${data.pricing ? ` <p>${data.pricing[0].price}</p>
+                   <p>${data.pricing[0].plan}</p></>`: "Data Not Found"}
                     </div>
                     <div class="text-warning"  >
-                    <p>${data.pricing[1].price}</p>
-                    <p>${data.pricing[1].plan}</p>
+                    ${data.pricing ? `<p>${data.pricing[1].price}</p>
+                    <p>${data.pricing[1].plan}</p></>`: "Data Not Found"}
                     </div>
                     <div class="text-danger">
-                    <p>${data.pricing[2].price}</p>
-                    <p>${data.pricing[2].plan}</p>
+                    ${data.pricing ? `<p>${data.pricing[2].price}</p>
+                    <p>${data.pricing[2].plan}</p></>`: "Data Not Found"}
 
                     </div>
 
@@ -193,11 +193,13 @@ const showModalDetails = (data) => {
 
             <div>
             <h4>Integrations</h4>
-                <ul>
-                <li>${data.integrations[0] ? data.integrations[0] : "No Data Found"}</li>
-                <li>${data.integrations[1] ? data.integrations[0] : "No Data Found"}</li>
-                <li>${data.integrations[2] ? data.integrations[0] : "No Data Found"}</li>
-                </ul>
+               ${data.integrations ? `
+               <ul>
+               <li>${data.integrations[0] ? data.integrations[0] : "No Data Found"}</li>
+               <li>${data.integrations[1] ? data.integrations[1] : "No Data Found"}</li>
+               <li>${data.integrations[2] ? data.integrations[2] : "No Data Found"}</li>
+               </ul>
+               ` : "data Not found"}
             </div>
         
         </div> 
@@ -206,10 +208,18 @@ const showModalDetails = (data) => {
     </div>
     <div class="col">
       <div class="card">
+      <div class="modal-footer">
+      ${data.accuracy?.score ? `<p class="btn btn-danger  btn-sm w-25">  ${data.accuracy?.score * 100}% accuracy </p>` : ""}
+      </div>
+
         <img src="${data.image_link[0]}" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">${data.input_output_examples[0].input}</h5>
-          <p class="card-title">${data.input_output_examples[0].output}</p>
+            ${data.input_output_examples ? `
+
+            <h5 class="card-title">${data.input_output_examples[0].input ? data.input_output_examples[0].input : "Can you give any example?"}</h5>
+
+            <p class="card-title">${data.input_output_examples[1].output ? data.input_output_examples[1].output : "No!not Yet! Take a break!" }</p>
+            ` : "No!not Yet! Take a break!"}
        
         </div>
       </div>
