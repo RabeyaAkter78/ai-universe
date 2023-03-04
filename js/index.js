@@ -21,16 +21,16 @@ const containerDiv = document.getElementById('ais-container');
 const displayData = (tools) => {
     // console.log(tools);
 
-  // section display 06 tools only start:
-//   const seeMore = document.getElementById('see-More');
-//   if (tools.length>6) {
-//       tools = tools.slice(0,6);
-//       seeMore.classList.remove('d-none');
-//   }
-//   else {
-//       seeMore.classList.add('d-none');
-//   }
- // section display 06 tools only end:
+//   section display 06 tools only start:
+  const seeMore = document.getElementById('see-More');
+  if (tools.length>6) {
+      tools = tools.slice(0,6);
+      seeMore.classList.remove('d-none');
+  }
+  else {
+      seeMore.classList.add('d-none');
+  }
+//  section display 06 tools only end:
 
     // display All data:
     tools.forEach(tool => {
