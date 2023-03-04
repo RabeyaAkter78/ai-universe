@@ -90,21 +90,6 @@ const displayData = (tools) => {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //     toggleSpinner(false);
 
 // // stop spinner:
@@ -112,6 +97,7 @@ const displayData = (tools) => {
 // toggleSpinner(true);
 
 // })
+
 //  const toggleSpinner=isLoading=>{
 // const spinnerSection=document.getElementById('spinner');
 // if(isLoading){
