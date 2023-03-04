@@ -4,6 +4,8 @@ const seeMore = document.getElementById('see-More');
 
 const loader = document.getElementById('spinner');
 const modalDialog = document.getElementsByClassName('modal-dialog')[0];
+
+const btnSort = document.getElementById('sorting');
 // console.log(modalDialog[0])
 
 // console.log(loader)
@@ -168,15 +170,15 @@ const showModalDetails = (data) => {
             <div class="d-flex justify-content-between">
                     <div class="text-success">
                    ${data.pricing ? ` <p>${data.pricing[0].price}</p>
-                   <p>${data.pricing[0].plan}</p></>`: "Data Not Found"}
+                   <p>${data.pricing[0].plan}</p></>` : "Data Not Found"}
                     </div>
                     <div class="text-warning"  >
                     ${data.pricing ? `<p>${data.pricing[1].price}</p>
-                    <p>${data.pricing[1].plan}</p></>`: "Data Not Found"}
+                    <p>${data.pricing[1].plan}</p></>` : "Data Not Found"}
                     </div>
                     <div class="text-danger">
                     ${data.pricing ? `<p>${data.pricing[2].price}</p>
-                    <p>${data.pricing[2].plan}</p></>`: "Data Not Found"}
+                    <p>${data.pricing[2].plan}</p></>` : "Data Not Found"}
 
                     </div>
 
@@ -218,7 +220,7 @@ const showModalDetails = (data) => {
 
             <h5 class="card-title">${data.input_output_examples[0].input ? data.input_output_examples[0].input : "Can you give any example?"}</h5>
 
-            <p class="card-title">${data.input_output_examples[1].output ? data.input_output_examples[1].output : "No!not Yet! Take a break!" }</p>
+            <p class="card-title">${data.input_output_examples[1].output ? data.input_output_examples[1].output : "No!not Yet! Take a break!"}</p>
             ` : "No!not Yet! Take a break!"}
        
         </div>
@@ -234,4 +236,11 @@ const showModalDetails = (data) => {
     // console.log(datas)
 }
 
+// sorting:
+btnSort.addEventListener('click', ()=>{
+
+
+    
+    console.log('clicked')
+})
 loadData();
